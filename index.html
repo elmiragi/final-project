@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./script.js"></script>
     <title>Avelon - Furniture Brand</title>
     
 </head>
 <body>
 <header class="first-container">
   <h1>Avion</h1> 
+
   <div class="avion">
- 
-    <nav>
-      <a href="">Plant&nbsp;pots</a>
+
+    <nav class="nav-menu">
+      <a href="" class="hiddenElements">Plant&nbsp;pots</a>
       <a href="">Ceramics</a>
       <a href="">Tables</a>
       <a href="">Chairs</a>
@@ -29,24 +31,36 @@
     <img src="./img/user-avatar.png" alt="profile">
     <img src="./img/menu.png" alt="menu" id="hiddenImg">    
   </div>
+
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="">Plant pots</a>
+    <a href="">Ceramics</a>
+    <a href="">Tables</a>
+    <a href="">Chairs</a>
+    <a href="">Crockery</a>
+    <a href="">Tableware</a>
+    <a href="">Cutlery</a>
+  </div>
 </header>
 
 
 <section class="second-container">
     <div class="furniture-brand">
       <p class="furniture-title">The furniture brand for the future,<br> with timeless designs</p>
-      <button id="hover-btn" class="btn light">View collection</button>
+        <button id="hover-btn" class="btn light">View collection</button>
       <p class="furniture-text">A new era in eco friendly furniture with Avelon, the French luxury retail brand
         with nice fonts, tasteful colors and a beautiful way to display things digitally 
         using modern web technologies.</p>
     </div>
-    <img src="./img/right-chair.png">
+
+      <img src="./img/right-chair.png">
 </section>
 
 
 <main class="container">
   <h1 style="margin-bottom: 20px">New ceramics</h1>
-  <div class="cardWrapper">
+  <div class="cardWrapper" id="cardWrapper">
     <div class="card">
         <img src="./img/chair.png" alt="chair">
           <h4>The Dandy chair</h4>
@@ -67,10 +81,11 @@
           <h4>The Lucy Lamp</h4>
           <h4>£399</h4>
     </div>
+    
   </div>
  
-  <div class="view-collection" >
-    <button id="central-btn" class="btn primary">View&nbsp;collection</button>
+  <div class="view-collection" id="viewCollectionBtn">
+    <button id="central-btn" class="btn primary" >View&nbsp;collection</button>
   </div>
 </main>
 
@@ -118,10 +133,13 @@
       <div class="join">
         <div style="margin: 20px">
           <h3>Join our mailing list</h3>
-          <div>
-          <input type="text" class="input-text" placeholder="your@email.com">
-          <button class="submit-btn">Sign&nbsp;up</button>
-          </div>
+          <form id="emailForm">
+            <div>            
+              <input type="text" class="input-text" placeholder="your@email.com" id="email">
+              <button  type="submit" class="submit-btn">Sign&nbsp;up</button>            
+            </div>
+            <p id="error-message" class="error"></p>
+          </form>
         </div>
     </div>
     </div>
@@ -150,3 +168,5 @@
   </div>
 </footer>
 </html>
+
+

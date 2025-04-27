@@ -186,6 +186,11 @@ main h3 h5 {
 }
 
 
+.hidden {
+    /* display: none !important; */
+    visibility: hidden;
+}
+
 #central-btn {
     margin: 25px 0 25px 0;
     width: fit-content;
@@ -328,7 +333,11 @@ footer i {
 
 footer hr {
     border: 1px solid var(--primary);
-     margin: 20px 0;
+    margin: 20px 0;
+}
+
+footer i {
+    cursor: pointer;
 }
 
 
@@ -514,4 +523,54 @@ footer hr {
         display: flex;
         justify-content: center;
     }
+}
+
+
+#hiddenImg {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.mobile-menu a {
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+}
+
+.error {
+    color: rgb(154, 60, 60);
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+  }
+  
+  input:invalid {
+    border: 1px solid rgb(154, 60, 60);
+  }
+
+@media (max-width: 768px) {
+    #hiddenImg {
+        display: block;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .mobile-menu.active {
+        display: flex;
+    }
+
 }
